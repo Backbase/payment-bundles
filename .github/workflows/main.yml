@@ -1,0 +1,21 @@
+name: Maven Verify
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+#  verify:
+#    name: Maven Verify
+#    uses: backbase/workflows/.github/workflows/maven-verify.yml@main
+#    secrets:
+#      maven-username: ${{ secrets.MAVEN_USERNAME }}
+#      maven-password: ${{ secrets.MAVEN_PASSWORD }}
